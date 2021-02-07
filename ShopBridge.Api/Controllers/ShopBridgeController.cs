@@ -49,8 +49,8 @@ namespace ShopBridge.Api.Controllers
 
         }
 
-        [HttpDelete("delete/record")]
-        public async Task<IActionResult> Delete([FromBody] ShopBridgeVM shopBridgeVM)
+        [HttpPost("delete/data")]
+        public async Task<IActionResult> DeleteData([FromBody] ShopBridgeVM shopBridgeVM)
         {
             try
             {
@@ -61,9 +61,10 @@ namespace ShopBridge.Api.Controllers
             {
                 throw;
             }
+
         }
 
-        [HttpPut("update/record")]
+        [HttpPost("update/data")]
         public async Task<IActionResult> Update([FromBody] ShopBridgeVM shopBridgeVM)
         {
             try
