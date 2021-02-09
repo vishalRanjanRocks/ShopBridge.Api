@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Description</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of records;">
+      <td> {{ record.name }}</td>
+      <td> {{ record.price }}</td>
+      <td> {{ record.description }}</td>
+      <td>
+        <button type="button" class="btn btn-info" name="edit" (click)="edit(record)">Edit</button>&nbsp;
+        <button type="button" class="btn btn-danger" name="Delete" (click)="delete(record)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
